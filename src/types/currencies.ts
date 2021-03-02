@@ -4,181 +4,172 @@ export type Currency = {
 };
 
 const Currencies = {
-	AED: <Currency>{ symbol: "AED", name: "United Arab Emirates Dirham" },
-	AFN: <Currency>{ symbol: "AFN", name: "Afghan Afghani" },
-	ALL: <Currency>{ symbol: "ALL", name: "Albanian Lek" },
-	AMD: <Currency>{ symbol: "AMD", name: "Armenian Dram" },
-	ANG: <Currency>{ symbol: "ANG", name: "Netherlands Antillean Guilder" },
-	AOA: <Currency>{ symbol: "AOA", name: "Angolan Kwanza" },
-	ARS: <Currency>{ symbol: "ARS", name: "Argentine Peso" },
-	AUD: <Currency>{ symbol: "AUD", name: "Australian Dollar" },
-	AWG: <Currency>{ symbol: "AWG", name: "Aruban Florin" },
-	AZN: <Currency>{ symbol: "AZN", name: "Azerbaijani Manat" },
-	BAM: <Currency>{ symbol: "BAM", name: "Bosnia-Herzegovina Convertible Mark" },
-	BBD: <Currency>{ symbol: "BBD", name: "Barbadian Dollar" },
-	BDT: <Currency>{ symbol: "BDT", name: "Bangladeshi Taka" },
-	BGN: <Currency>{ symbol: "BGN", name: "Bulgarian Lev" },
-	BHD: <Currency>{ symbol: "BHD", name: "Bahraini Dinar" },
-	BIF: <Currency>{ symbol: "BIF", name: "Burundian Franc" },
-	UYU: <Currency>{ symbol: "UYU", name: "Uruguayan Peso" },
+    AED: <Currency> { symbol:'AED' , name:'United Arab Emirates Dirham'},
+    AFN: <Currency> { symbol:'AFN' , name:'Afghan Afghani'},
+    ALL: <Currency> { symbol:'ALL' , name:'Albanian Lek'},
+    AMD: <Currency> { symbol:'AMD' , name:'Armenian Dram'},
+    ANG: <Currency> { symbol:'ANG' , name:'Netherlands Antillean Guilder'},
+    AOA: <Currency> { symbol:'AOA' , name:'Angolan Kwanza'},
+    ARS: <Currency> { symbol:'ARS' , name:'Argentine Peso'},
+    AUD: <Currency> { symbol:'AUD' , name:'Australian Dollar'},
+    AWG: <Currency> { symbol:'AWG' , name:'Aruban Florin'},
+    AZN: <Currency> { symbol:'AZN' , name:'Azerbaijani Manat'},
+    BAM: <Currency> { symbol:'BAM' , name:'Bosnia-Herzegovina Convertible Mark'},
+    BBD: <Currency> { symbol:'BBD' , name:'Barbadian Dollar'},
+    BDT: <Currency> { symbol:'BDT' , name:'Bangladeshi Taka'},
+    BGN: <Currency> { symbol:'BGN' , name:'Bulgarian Lev'},
+    BHD: <Currency> { symbol:'BHD' , name:'Bahraini Dinar'},
+    BIF: <Currency> { symbol:'BIF' , name:'Burundian Franc'},
+    BMD: <Currency> { symbol:'BMD' , name:'Bermudan Dollar'},
+    BND: <Currency> { symbol:'BND' , name:'Brunei Dollar'},
+    BOB: <Currency> { symbol:'BOB' , name:'Bolivian Boliviano'},
+    BRL: <Currency> { symbol:'BRL' , name:'Brazilian Real'},
+    BDS: <Currency> { symbol:'BSD' , name:'Bahamian Dollar'},
+    BTN: <Currency> { symbol:'BTN' , name:'Bhutanese Ngultrum'},
+    BWP: <Currency> { symbol:'BWP' , name:'Botswanan Pula'},
+    BYR: <Currency> { symbol:'BYR' , name:'Belarusian Ruble'},
+    BZD: <Currency> { symbol:'BZD' , name:'Belize Dollar'},
+    CAD: <Currency> { symbol:'CAD' , name:'Canadian Dollar'},
+    CDF: <Currency> { symbol:'CDF' , name:'Congolese Franc'},
+    CHF: <Currency> { symbol:'CHF' , name:'Swiss Franc'},
+    CLF: <Currency> { symbol:'CLF' , name:'Chilean Unit of Account (UF)'},
+    CLP: <Currency> { symbol:'CLP' , name:'Chilean Peso'},
+    CNY: <Currency> { symbol:'CNY' , name:'Chinese Yuan'},
+    COP: <Currency> { symbol:'COP' , name:'Colombian Peso'},
+    CRC: <Currency> { symbol:'CRC' , name:'Costa Rican ColÃ³n'},
+    CUP: <Currency> { symbol:'CUP' , name:'Cuban Peso'},
+    CVE: <Currency> { symbol:'CVE' , name:'Cape Verdean Escudo'},
+    CZK: <Currency> { symbol:'CZK' , name:'Czech Republic Koruna'},
+    DJF: <Currency> { symbol:'DJF' , name:'Djiboutian Franc'},
+    DKK: <Currency> { symbol:'DKK' , name:'Danish Krone'},
+    DOP: <Currency> { symbol:'DOP' , name:'Dominican Peso'},
+    DZD: <Currency> { symbol:'DZD' , name:'Algerian Dinar'},
+    EGP: <Currency> { symbol:'EGP' , name:'Egyptian Pound'},
+    ETP: <Currency> { symbol:'ETB' , name:'Ethiopian Birr'},
+    EUR: <Currency> { symbol:'EUR' , name:'Euro'},
+    FJD: <Currency> { symbol:'FJD' , name:'Fijian Dollar'},
+    FKP: <Currency> { symbol:'FKP' , name:'Falkland Islands Pound'},
+    GBP: <Currency> { symbol:'GBP' , name:'British Pound Sterling'},
+    GEL: <Currency> { symbol:'GEL' , name:'Georgian Lari'},
+    GHS: <Currency> { symbol:'GHS' , name:'Ghanaian Cedi'},
+    GIP: <Currency> { symbol:'GIP' , name:'Gibraltar Pound'},
+    GMD: <Currency> { symbol:'GMD' , name:'Gambian Dalasi'},
+    GNF: <Currency> { symbol:'GNF' , name:'Guinean Franc'},
+    GTQ: <Currency> { symbol:'GTQ' , name:'Guatemalan Quetzal'},
+    GYD: <Currency> { symbol:'GYD' , name:'Guyanaese Dollar'},
+    HKD: <Currency> { symbol:'HKD' , name:'Hong Kong Dollar'},
+    HNL: <Currency> { symbol:'HNL' , name:'Honduran Lempira'},
+    HRK: <Currency> { symbol:'HRK' , name:'Croatian Kuna'},
+    HTG: <Currency> { symbol:'HTG' , name:'Haitian Gourde'},
+    HUF: <Currency> { symbol:'HUF' , name:'Hungarian Forint'},
+    IDR: <Currency> { symbol:'IDR' , name:'Indonesian Rupiah'},
+    ILS: <Currency> { symbol:'ILS' , name:'Israeli New Sheqel'},
+    INR: <Currency> { symbol:'INR' , name:'Indian Rupee'},
+    IQD: <Currency> { symbol:'IQD' , name:'Iraqi Dinar'},
+    IRR: <Currency> { symbol:'IRR' , name:'Iranian Rial'},
+    ISK: <Currency> { symbol:'ISK' , name:'Icelandic KrÃ³na'},
+    JEP: <Currency> { symbol:'JEP' , name:'Jersey Pound'},
+    JDM: <Currency> { symbol:'JMD' , name:'Jamaican Dollar'},
+    JOD: <Currency> { symbol:'JOD' , name:'Jordanian Dinar'},
+    JPY: <Currency> { symbol:'JPY' , name:'Japanese Yen'},
+    KES: <Currency> { symbol:'KES' , name:'Kenyan Shilling'},
+    KGS: <Currency> { symbol:'KGS' , name:'Kyrgystani Som'},
+    KHR: <Currency> { symbol:'KHR' , name:'Cambodian Riel'},
+    KMF: <Currency> { symbol:'KMF' , name:'Comorian Franc'},
+    KPW: <Currency> { symbol:'KPW' , name:'North Korean Won'},
+    KRW: <Currency> { symbol:'KRW' , name:'South Korean Won'},
+    KWD: <Currency> { symbol:'KWD' , name:'Kuwaiti Dinar'},
+    KYD: <Currency> { symbol:'KYD' , name:'Cayman Islands Dollar'},
+    KZT: <Currency> { symbol:'KZT' , name:'Kazakhstani Tenge'},
+    LAK: <Currency> { symbol:'LAK' , name:'Laotian Kip'},
+    LBP: <Currency> { symbol:'LBP' , name:'Lebanese Pound'},
+    LKR: <Currency> { symbol:'LKR' , name:'Sri Lankan Rupee'},
+    LRD: <Currency> { symbol:'LRD' , name:'Liberian Dollar'},
+    LSL: <Currency> { symbol:'LSL' , name:'Lesotho Loti'},
+    LTL: <Currency> { symbol:'LTL' , name:'Lithuanian Litas'},
+    LVL: <Currency> { symbol:'LVL' , name:'Latvian Lats'},
+    LYD: <Currency> { symbol:'LYD' , name:'Libyan Dinar'},
+    MAD: <Currency> { symbol:'MAD' , name:'Moroccan Dirham'},
+    MDL: <Currency> { symbol:'MDL' , name:'Moldovan Leu'},
+    MGA: <Currency> { symbol:'MGA' , name:'Malagasy Ariary'},
+    MKD: <Currency> { symbol:'MKD' , name:'Macedonian Denar'},
+    MMK: <Currency> { symbol:'MMK' , name:'Myanma Kyat'},
+    MNT: <Currency> { symbol:'MNT' , name:'Mongolian Tugrik'},
+    MOP: <Currency> { symbol:'MOP' , name:'Macanese Pataca'},
+    MRO: <Currency> { symbol:'MRO' , name:'Mauritanian Ouguiya'},
+    MUR: <Currency> { symbol:'MUR' , name:'Mauritian Rupee'},
+    MVR: <Currency> { symbol:'MVR' , name:'Maldivian Rufiyaa'},
+    MWK: <Currency> { symbol:'MWK' , name:'Malawian Kwacha'},
+    MXN: <Currency> { symbol:'MXN' , name:'Mexican Peso'},
+    MYR: <Currency> { symbol:'MYR' , name:'Malaysian Ringgit'},
+    MZN: <Currency> { symbol:'MZN' , name:'Mozambican Metical'},
+    NAD: <Currency> { symbol:'NAD' , name:'Namibian Dollar'},
+    NGN: <Currency> { symbol:'NGN' , name:'Nigerian Naira'},
+    NIO: <Currency> { symbol:'NIO' , name:'Nicaraguan CÃ³rdoba'},
+    NOK: <Currency> { symbol:'NOK' , name:'Norwegian Krone'},
+    NPR: <Currency> { symbol:'NPR' , name:'Nepalese Rupee'},
+    NZD: <Currency> { symbol:'NZD' , name:'New Zealand Dollar'},
+    OMR: <Currency> { symbol:'OMR' , name:'Omani Rial'},
+    PAB: <Currency> { symbol:'PAB' , name:'Panamanian Balboa'},
+    PEN: <Currency> { symbol:'PEN' , name:'Peruvian Nuevo Sol'},
+    PGK: <Currency> { symbol:'PGK' , name:'Papua New Guinean Kina'},
+    PHP: <Currency> { symbol:'PHP' , name:'Philippine Peso'},
+    PKR: <Currency> { symbol:'PKR' , name:'Pakistani Rupee'},
+    PLN: <Currency> { symbol:'PLN' , name:'Polish Zloty'},
+    PYG: <Currency> { symbol:'PYG' , name:'Paraguayan Guarani'},
+    QAR: <Currency> { symbol:'QAR' , name:'Qatari Rial'},
+    RON: <Currency> { symbol:'RON' , name:'Romanian Leu'},
+    RSD: <Currency> { symbol:'RSD' , name:'Serbian Dinar'},
+    RUB: <Currency> { symbol:'RUB' , name:'Russian Ruble'},
+    RWF: <Currency> { symbol:'RWF' , name:'Rwandan Franc'},
+    SAR: <Currency> { symbol:'SAR' , name:'Saudi Riyal'},
+    SBD: <Currency> { symbol:'SBD' , name:'Solomon Islands Dollar'},
+    SRC: <Currency> { symbol:'SCR' , name:'Seychellois Rupee'},
+    SDG: <Currency> { symbol:'SDG' , name:'Sudanese Pound'},
+    SEK: <Currency> { symbol:'SEK' , name:'Swedish Krona'},
+    SGD: <Currency> { symbol:'SGD' , name:'Singapore Dollar'},
+    SHP: <Currency> { symbol:'SHP' , name:'Saint Helena Pound'},
+    SLL: <Currency> { symbol:'SLL' , name:'Sierra Leonean Leone'},
+    SOS: <Currency> { symbol:'SOS' , name:'Somali Shilling'},
+    SRD: <Currency> { symbol:'SRD' , name:'Surinamese Dollar'},
+    STD: <Currency> { symbol:'STD' , name:'SÃ£o TomÃ© and PrÃ­ncipe Dobra'},
+    SVC: <Currency> { symbol:'SVC' , name:'Salvadoran ColÃ³n'},
+    SYP: <Currency> { symbol:'SYP' , name:'Syrian Pound'},
+    SZL: <Currency> { symbol:'SZL' , name:'Swazi Lilangeni'},
+    THB: <Currency> { symbol:'THB' , name:'Thai Baht'},
+    TJS: <Currency> { symbol:'TJS' , name:'Tajikistani Somoni'},
+    TMT: <Currency> { symbol:'TMT' , name:'Turkmenistani Manat'},
+    TND: <Currency> { symbol:'TND' , name:'Tunisian Dinar'},
+    TOP: <Currency> { symbol:'TOP' , name:'Tongan Pa?anga'},
+    TRY: <Currency> { symbol:'TRY' , name:'Turkish Lira'},
+    TTD: <Currency> { symbol:'TTD' , name:'Trinidad and Tobago Dollar'},
+    TWD: <Currency> { symbol:'TWD' , name:'New Taiwan Dollar'},
+    TZS: <Currency> { symbol:'TZS' , name:'Tanzanian Shilling'},
+    UAH: <Currency> { symbol:'UAH' , name:'Ukrainian Hryvnia'},
+    UGX: <Currency> { symbol:'UGX' , name:'Ugandan Shilling'},
+    USD: <Currency> { symbol:'USD' , name:'United States Dollar'},
+    UYU: <Currency> { symbol:'UYU' , name:'Uruguayan Peso'},
+    UZS: <Currency> { symbol:'UZS' , name:'Uzbekistan Som'},
+    VEF: <Currency> { symbol:'VEF' , name:'Venezuelan BolÃ­var'},
+    VND: <Currency> { symbol:'VND' , name:'Vietnamese Dong'},
+    VUV: <Currency> { symbol:'VUV' , name:'Vanuatu Vatu'},
+    WST: <Currency> { symbol:'WST' , name:'Samoan Tala'},
+    XAF: <Currency> { symbol:'XAF' , name:'CFA Franc BEAC'},
+    XCD: <Currency> { symbol:'XCD' , name:'East Caribbean Dollar'},
+    XDR: <Currency> { symbol:'XDR' , name:'Special Drawing Rights'},
+    XOF: <Currency> { symbol:'XOF' , name:'CFA Franc BCEAO'},
+    XPF: <Currency> { symbol:'XPF' , name:'CFP Franc'},
+    YER: <Currency> { symbol:'YER' , name:'Yemeni Rial'},
+    ZAR: <Currency> { symbol:'ZAR' , name:'South African Rand'},
+    ZMK: <Currency> { symbol:'ZMK' , name:'Zambian Kwacha'},
+    ZWL: <Currency> { symbol:'ZWL' , name:'Zimbabwean Dollar'},
 };
 
 export default Currencies;
 
-/*
- <Currency>{},
 
-   
-    BMD 	Bermudan Dollar
-    BND 	Brunei Dollar
-    BOB 	Bolivian Boliviano
-    BRL 	Brazilian Real
-    BSD 	Bahamian Dollar
-    BTC 	Bitcoin
-    BTN 	Bhutanese Ngultrum
-    BWP 	Botswanan Pula
-    BYR 	Belarusian Ruble
-    BYN 	New Belarusian Ruble
-    BZD 	Belize Dollar
-    CAD 	Canadian Dollar
-    CDF 	Congolese Franc
-    CHF 	Swiss Franc
-    CLF 	Chilean Unit of Account (UF)
-    CLP 	Chilean Peso
-    CNY 	Chinese Yuan
-    COP 	Colombian Peso
-    CRC 	Costa Rican Colón
-    CUC 	Cuban Convertible Peso
-    CUP 	Cuban Peso
-    CVE 	Cape Verdean Escudo
-    CZK 	Czech Republic Koruna
-    DJF 	Djiboutian Franc
-    DKK 	Danish Krone
-    DOP 	Dominican Peso
-    DZD 	Algerian Dinar
-    EGP 	Egyptian Pound
-    ERN 	Eritrean Nakfa
-    ETB 	Ethiopian Birr
-    EUR 	Euro
-    FJD 	Fijian Dollar
-    FKP 	Falkland Islands Pound
-    GBP 	British Pound Sterling
-    GEL 	Georgian Lari
-    GGP 	Guernsey Pound
-    GHS 	Ghanaian Cedi
-    GIP 	Gibraltar Pound
-    GMD 	Gambian Dalasi
-    GNF 	Guinean Franc
-    GTQ 	Guatemalan Quetzal
-    GYD 	Guyanaese Dollar
-    HKD 	Hong Kong Dollar
-    HNL 	Honduran Lempira
-    HRK 	Croatian Kuna
-    HTG 	Haitian Gourde
-    HUF 	Hungarian Forint
-    IDR 	Indonesian Rupiah
-    ILS 	Israeli New Sheqel
-    IMP 	Manx pound
-    INR 	Indian Rupee
-    IQD 	Iraqi Dinar
-    IRR 	Iranian Rial
-    ISK 	Icelandic Króna
-    JEP 	Jersey Pound
-    JMD 	Jamaican Dollar
-    JOD 	Jordanian Dinar
-    JPY 	Japanese Yen
-    KES 	Kenyan Shilling
-    KGS 	Kyrgystani Som
-    KHR 	Cambodian Riel
-    KMF 	Comorian Franc
-    KPW 	North Korean Won
-    KRW 	South Korean Won
-    KWD 	Kuwaiti Dinar
-    KYD 	Cayman Islands Dollar
-    KZT 	Kazakhstani Tenge
-    LAK 	Laotian Kip
-    LBP 	Lebanese Pound
-    LKR 	Sri Lankan Rupee
-    LRD 	Liberian Dollar
-    LSL 	Lesotho Loti
-    LTL 	Lithuanian Litas
-    LVL 	Latvian Lats
-    LYD 	Libyan Dinar
-    MAD 	Moroccan Dirham
-    MDL 	Moldovan Leu
-    MGA 	Malagasy Ariary
-    MKD 	Macedonian Denar
-    MMK 	Myanma Kyat
-    MNT 	Mongolian Tugrik
-    MOP 	Macanese Pataca
-    MRO 	Mauritanian Ouguiya
-    MUR 	Mauritian Rupee
-    MVR 	Maldivian Rufiyaa
-    MWK 	Malawian Kwacha
-    MXN 	Mexican Peso
-    MYR 	Malaysian Ringgit
-    MZN 	Mozambican Metical
-    NAD 	Namibian Dollar
-    NGN 	Nigerian Naira
-    NIO 	Nicaraguan Córdoba
-    NOK 	Norwegian Krone
-    NPR 	Nepalese Rupee
-    NZD 	New Zealand Dollar
-    OMR 	Omani Rial
-    PAB 	Panamanian Balboa
-    PEN 	Peruvian Nuevo Sol
-    PGK 	Papua New Guinean Kina
-    PHP 	Philippine Peso
-    PKR 	Pakistani Rupee
-    PLN 	Polish Zloty
-    PYG 	Paraguayan Guarani
-    QAR 	Qatari Rial
-    RON 	Romanian Leu
-    RSD 	Serbian Dinar
-    RUB 	Russian Ruble
-    RWF 	Rwandan Franc
-    SAR 	Saudi Riyal
-    SBD 	Solomon Islands Dollar
-    SCR 	Seychellois Rupee
-    SDG 	Sudanese Pound
-    SEK 	Swedish Krona
-    SGD 	Singapore Dollar
-    SHP 	Saint Helena Pound
-    SLL 	Sierra Leonean Leone
-    SOS 	Somali Shilling
-    SRD 	Surinamese Dollar
-    STD 	São Tomé and Príncipe Dobra
-    SVC 	Salvadoran Colón
-    SYP 	Syrian Pound
-    SZL 	Swazi Lilangeni
-    THB 	Thai Baht
-    TJS 	Tajikistani Somoni
-    TMT 	Turkmenistani Manat
-    TND 	Tunisian Dinar
-    TOP 	Tongan Paʻanga
-    TRY 	Turkish Lira
-    TTD 	Trinidad and Tobago Dollar
-    TWD 	New Taiwan Dollar
-    TZS 	Tanzanian Shilling
-    UAH 	Ukrainian Hryvnia
-    UGX 	Ugandan Shilling
-    USD 	United States Dollar
-    UYU 	Uruguayan Peso
-    UZS 	Uzbekistan Som
-    VEF 	Venezuelan Bolívar Fuerte
-    VND 	Vietnamese Dong
-    VUV 	Vanuatu Vatu
-    WST 	Samoan Tala
-    XAF 	CFA Franc BEAC
-    XAG 	Silver (troy ounce)
-    XAU 	Gold (troy ounce)
-    XCD 	East Caribbean Dollar
-    XDR 	Special Drawing Rights
-    XOF 	CFA Franc BCEAO
-    XPF 	CFP Franc
-    YER 	Yemeni Rial
-    ZAR 	South African Rand
-    ZMK 	Zambian Kwacha (pre-2013)
-    ZMW 	Zambian Kwacha
-    ZWL 	Zimbabwean Dollar
-*/
+
+
+
+
+

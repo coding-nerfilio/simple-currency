@@ -1,5 +1,7 @@
 import fetcher, { FetcherResponse } from "../../fetcher";
+import storage from "../../storage";
 import Currencies from "../../types/currencies";
+import { historyEntry } from "../../types/history";
 import { Inputs, IState } from "./exchanger-input.types";
 
 export const handleInput = (type: Inputs, data: string, state: IState) => {
@@ -71,11 +73,24 @@ export const handleExchangeOperation = async (
 		}
 	}
 
-	return (
-		(Number(state.firstCurrency.value) /
-			currencyRates.data["USD" + state.firstCurrency.currencyType.symbol]) *
-		currencyRates.data["USD" + state.secondCurrency.currencyType.symbol]
-	).toFixed(3);
+	let historyEntry: historyEntry = {
+		source: {
+			currency: state.firstCurrency.currencyType.symbol,
+			value: state.firstCurrency.value,
+		},
+		destination: {
+			currency: state.secondCurrency.currencyType.symbol,
+			value: (
+				(Number(state.firstCurrency.value) /
+					currencyRates.data["USD" + state.firstCurrency.currencyType.symbol]) *
+				currencyRates.data["USD" + state.secondCurrency.currencyType.symbol]
+			).toFixed(3),
+		},
+	};
+
+	storage.addToExchangeHistory(historyEntry);
+
+	return historyEntry.destination.value;
 };
 
 const getKeyValue = (obj: any, key: any) => obj[key];

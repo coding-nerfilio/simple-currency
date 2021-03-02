@@ -1,4 +1,5 @@
 import { Currency } from "../../types/currencies";
+import { historyEntry } from "../../types/history";
 
 export enum Inputs {
 	firstCurrency_value,
@@ -19,4 +20,6 @@ export type IState = {
 	secondCurrency: CurrencyInput;
 };
 
-export type IProps = {};
+export type IProps = {
+	handleUpdateHistory: (historyList: historyEntry[]) => any;
+};

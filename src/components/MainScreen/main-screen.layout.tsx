@@ -1,9 +1,14 @@
 import * as React from "react";
+import ExchangerHistory from "../ExchangerHistory";
 import ExchangerInput from "../ExchangerInput";
-const Layout = () => (
+const Layout = (props: {
+	handleUpdateHistory: () => void;
+	updateHistory: number;
+}) => (
 	<div>
 		Main Screen
 		<ExchangerInput />
+		<ExchangerHistory />
 	</div>
 );
 export default Layout;
