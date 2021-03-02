@@ -1,10 +1,7 @@
 import * as React from "react";
 import ExchangerHistory from "../ExchangerHistory";
 import ExchangerInput from "../ExchangerInput";
-const Layout = (props: {
-	handleUpdateHistory: () => void;
-	updateHistory: number;
-}) => (
+const Layout = () => (
 	<div>
 		Main Screen
 		<ExchangerInput />

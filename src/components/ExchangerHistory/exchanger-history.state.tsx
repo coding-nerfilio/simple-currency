@@ -6,6 +6,7 @@ import { IProps } from "./exchanger-history.types";
 const State = ({ props }: { props: IProps }) => {
 	const handleDeleteHistory = () => {
 		storage.clearExchangeHistory();
+		props.deleteHistory();
 	};
 	return (
 		<Layout

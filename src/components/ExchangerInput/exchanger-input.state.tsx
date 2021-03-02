@@ -19,13 +19,13 @@ class State extends React.Component<IProps, IState> {
 				value: "",
 				error: false,
 				errorText: [],
-				currencyType: Currencies.ARS,
+				currencyType: Currencies.UYU,
 			},
 			secondCurrency: {
 				value: "",
 				error: false,
 				errorText: [],
-				currencyType: Currencies.BIF,
+				currencyType: Currencies.USD,
 			},
 		};
 	}

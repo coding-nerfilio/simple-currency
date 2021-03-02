@@ -34,7 +34,7 @@ class Storage {
 }
 
 const setDefaultLocalStorage = () => {
-	localStorage.setItem("usingStorage", "YES");
+	localStorage.setItem("usingStorage", " ");
 	localStorage.setItem("language", "en");
 	localStorage.setItem("history", JSON.stringify([]));
 };

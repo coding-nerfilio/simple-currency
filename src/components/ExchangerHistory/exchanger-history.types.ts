@@ -5,4 +5,7 @@ export type IState = {
 	update: number;
 };
 
-export type IProps = { historyList: historyEntry[] };
+export type IProps = {
+	historyList: historyEntry[];
+	deleteHistory: () => any;
+};

@@ -8,8 +8,14 @@ const SET_HISTORY = {
 	}),
 };
 
+const DELETE_HISTORY = {
+	type: "history/DELETE_HISTORY",
+	constructor: () => ({ type: "history/DELETE_HISTORY" }),
+};
+
 const history = {
 	SET_HISTORY,
+	DELETE_HISTORY,
 };
 
 export default history;

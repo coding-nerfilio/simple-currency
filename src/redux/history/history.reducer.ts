@@ -13,6 +13,11 @@ const history = (state = INITIAL_STATE, action: any) => {
 				...state,
 				historyList: action.payload,
 			};
+		case actions.history.DELETE_HISTORY.type:
+			return {
+				...state,
+				historyList: [],
+			};
 		default:
 			return state;
 	}

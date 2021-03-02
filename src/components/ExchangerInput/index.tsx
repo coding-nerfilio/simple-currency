@@ -4,11 +4,9 @@ import { historyEntry } from "../../types/history";
 import State from "./exchanger-input.state";
 import { IProps } from "./exchanger-input.types";
 
-const ExchangerInput = ({
-	handleUpdateHistory,
-}: {
-	handleUpdateHistory: (historyList: historyEntry[]) => any;
-}) => <State handleUpdateHistory={handleUpdateHistory} />;
+const ExchangerInput = (props: IProps) => (
+	<State handleUpdateHistory={props.handleUpdateHistory} />
+);
 
 export default connect(null, (dispatch) => ({
 	handleUpdateHistory: (historyList: historyEntry[]) =>
