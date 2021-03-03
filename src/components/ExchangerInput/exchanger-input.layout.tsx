@@ -20,7 +20,7 @@ const Layout = (props: {
 	changeCurrency: () => void;
 }) => (
 	<Flex flexDir="column" align="center">
-		<Flex>
+		<Flex flexDir={["column", "column", "row"]}>
 			<InputField
 				placeholder={"Enter value"}
 				field={props.state.firstCurrency}
@@ -31,6 +31,7 @@ const Layout = (props: {
 					props.handleInput(Inputs.firstCurrency_type, e.target.value);
 				}}
 			/>
+			<Button onClick={props.changeCurrency}>Change currencies</Button>
 			<InputField
 				placeholder={"Result"}
 				field={props.state.secondCurrency}
@@ -41,7 +42,6 @@ const Layout = (props: {
 		</Flex>
 		<Flex>
 			<Button onClick={props.handleExchangeOperation}>Calculate</Button>
-			<Button onClick={props.changeCurrency}>Change currencies</Button>
 		</Flex>
 	</Flex>
 );

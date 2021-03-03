@@ -26,16 +26,19 @@ const InputField = ({
 			<Text>{field.currencyType.name}</Text>
 		</Flex>
 		<Flex>
-			<Input
-				placeholder={placeholder}
-				value={field.value}
-				onChange={(e) => {
-					onChangeText(e);
-				}}
-				isInvalid={field.error}
-				borderRadius="0"
-				borderRightWidth="0"
-			/>
+			{onChangeText !== undefined && (
+				<Input
+					placeholder={placeholder}
+					value={field.value}
+					onChange={(e) => {
+						onChangeText(e);
+					}}
+					isInvalid={field.error}
+					borderRadius="0"
+					borderRightWidth="0"
+				/>
+			)}
+
 			<Select
 				borderRadius="0"
 				borderLeftWidth="0"
