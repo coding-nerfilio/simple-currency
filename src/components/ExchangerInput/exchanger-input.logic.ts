@@ -54,7 +54,8 @@ export const checkInputErrors = (
 };
 
 export const handleExchangeOperation = async (
-	state: IState
+	state: IState,
+	updateHistory: (historyList: historyEntry[]) => any
 ): Promise<string> => {
 	let currencyRates = await fetcher.getExchangeRate(
 		state.firstCurrency.currencyType,
@@ -89,6 +90,7 @@ export const handleExchangeOperation = async (
 	};
 
 	storage.addToExchangeHistory(historyEntry);
+	updateHistory(storage.getExchangeHistory());
 
 	return historyEntry.destination.value;
 };

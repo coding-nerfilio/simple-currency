@@ -8,7 +8,7 @@ export enum Inputs {
 	secondCurrency_type,
 }
 
-type CurrencyInput = {
+export type CurrencyInput = {
 	value: string;
 	error: boolean;
 	errorText: string[];

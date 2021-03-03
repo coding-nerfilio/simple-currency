@@ -24,14 +24,3 @@ export default connect(
 		deleteHistory: () => dispatch(actions.history.DELETE_HISTORY.constructor()),
 	})
 )(ExchangerHistory);
-
-/*
-
-{
-	historyList,
-	deleteHistory,
-}: {
-	historyList: historyEntry[];
-	deleteHistory: () => any;
-}
-*/

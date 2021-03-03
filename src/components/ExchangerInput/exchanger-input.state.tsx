@@ -1,6 +1,5 @@
 import React from "react";
-import fetcher from "../../fetcher";
-import storage from "../../storage";
+
 import Currencies from "../../types/currencies";
 import Layout from "./exchanger-input.layout";
 import {
@@ -41,13 +40,14 @@ class State extends React.Component<IProps, IState> {
 			return;
 		}
 
-		let result = await handleExchangeOperation(this.state);
+		let result = await handleExchangeOperation(
+			this.state,
+			this.props.handleUpdateHistory
+		);
 
 		state.secondCurrency.value = result;
 
 		this.setState(state);
-
-		this.props.handleUpdateHistory(storage.getExchangeHistory());
 	};
 
 	changeCurrency = () => {

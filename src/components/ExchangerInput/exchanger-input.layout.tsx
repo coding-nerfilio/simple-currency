@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Inputs, IState } from "./exchanger-input.types";
 import Currencies from "../../types/currencies";
+import InputField from "../InputField";
 
 const Layout = (props: {
 	state: IState;
@@ -18,52 +19,25 @@ const Layout = (props: {
 	handleInput: (type: Inputs, data: string) => void;
 	changeCurrency: () => void;
 }) => (
-	<Flex flexDir="column">
+	<Flex flexDir="column" align="center">
 		<Flex>
-			<InputGroup>
-				<Input
-					placeholder={props.state.firstCurrency.currencyType.name}
-					value={props.state.firstCurrency.value}
-					onChange={(e) => {
-						props.handleInput(Inputs.firstCurrency_value, e.target.value);
-					}}
-					isInvalid={props.state.firstCurrency.error}
-				/>
-				<InputRightElement>
-					<Select
-						value={props.state.firstCurrency.currencyType.symbol}
-						onChange={(e) =>
-							props.handleInput(Inputs.firstCurrency_type, e.target.value)
-						}
-					>
-						{Object.keys(Currencies).map((key) => (
-							<option value={key}>{key}</option>
-						))}
-					</Select>
-				</InputRightElement>
-				{props.state.firstCurrency.errorText.map((text) => (
-					<div>{text}</div>
-				))}
-			</InputGroup>
-			<InputGroup>
-				<Input
-					value={props.state.secondCurrency.value}
-					placeholder={props.state.secondCurrency.currencyType.name}
-				/>
-
-				<InputRightElement>
-					<Select
-						value={props.state.secondCurrency.currencyType.symbol}
-						onChange={(e) =>
-							props.handleInput(Inputs.secondCurrency_type, e.target.value)
-						}
-					>
-						{Object.keys(Currencies).map((key) => (
-							<option value={key}>{key}</option>
-						))}
-					</Select>
-				</InputRightElement>
-			</InputGroup>
+			<InputField
+				placeholder={"Enter value"}
+				field={props.state.firstCurrency}
+				onChangeText={(e: any) => {
+					props.handleInput(Inputs.firstCurrency_value, e.target.value);
+				}}
+				onChangeSelect={(e: any) => {
+					props.handleInput(Inputs.firstCurrency_type, e.target.value);
+				}}
+			/>
+			<InputField
+				placeholder={"Result"}
+				field={props.state.secondCurrency}
+				onChangeSelect={(e: any) => {
+					props.handleInput(Inputs.secondCurrency_type, e.target.value);
+				}}
+			/>
 		</Flex>
 		<Flex>
 			<Button onClick={props.handleExchangeOperation}>Calculate</Button>
