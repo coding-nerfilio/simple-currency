@@ -21,7 +21,7 @@ class Storage {
 
 	addToExchangeHistory = (entry: historyEntry) => {
 		let list = this.getExchangeHistory();
-		if (list.length > 4) {
+		if (list.length > 9) {
 			list.pop();
 		}
 		list.unshift(entry);

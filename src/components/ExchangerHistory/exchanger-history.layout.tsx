@@ -1,5 +1,6 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { CurrencyFlag } from "react-currency-flags/dist/components";
 import { historyEntry } from "../../types/history";
 
 const Layout = (props: {
@@ -16,17 +17,23 @@ const Layout = (props: {
 			props.historyList.map((entry) => (
 				<Flex bg="gray" justify="space-between" pt="1vh" pb="1vh">
 					<Flex flexDir="column" justify="center" align="center">
-						<Text>{entry.source.currency}</Text>
+						<Flex>
+							<CurrencyFlag currency={entry.source.currency} size="md" />
+							<Text>{entry.source.currency}</Text>
+						</Flex>
 						<Text>{entry.source.value}</Text>
 					</Flex>
 					<Flex flexDir="column" justify="center" align="center">
-						<Text>{entry.destination.currency}</Text>
+						<Flex>
+							<CurrencyFlag currency={entry.destination.currency} size="md" />
+							<Text>{entry.destination.currency}</Text>
+						</Flex>
 						<Text color="red">{entry.destination.value}</Text>
 					</Flex>
 				</Flex>
 			))
 		) : (
-			<Text>No entries on history</Text>
+			<Text>Your convertions will be displayed here</Text>
 		)}
 	</Flex>
 );

@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Currencies, { Currency } from "../../types/currencies";
 import { CurrencyInput } from "../ExchangerInput/exchanger-input.types";
+import CurrencyFlag from "react-currency-flags";
 
 const InputField = ({
 	field,
@@ -26,6 +27,7 @@ const InputField = ({
 			<Text>{field.currencyType.name}</Text>
 		</Flex>
 		<Flex>
+			<CurrencyFlag currency={field.currencyType.symbol} size="md" />
 			{onChangeText !== undefined && (
 				<Input
 					placeholder={placeholder}
