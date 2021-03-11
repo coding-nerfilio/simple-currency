@@ -8,9 +8,11 @@ export const handleInput = (type: Inputs, data: string, state: IState) => {
 	switch (type) {
 		case Inputs.firstCurrency_type:
 			state.firstCurrency.currencyType = getKeyValue(Currencies, data);
+			state.secondCurrency.value = "";
 			return state;
 		case Inputs.firstCurrency_value:
 			state.firstCurrency.value = data;
+			state.secondCurrency.value = "";
 			return state;
 		case Inputs.secondCurrency_type:
 			state.secondCurrency.currencyType = getKeyValue(Currencies, data);
@@ -24,9 +26,12 @@ export const handleInput = (type: Inputs, data: string, state: IState) => {
 };
 
 export const changeCurrency = (state: IState): IState => {
-	let temp = state.firstCurrency.currencyType;
-	state.firstCurrency.currencyType = state.secondCurrency.currencyType;
-	state.secondCurrency.currencyType = temp;
+	let temp = state.firstCurrency;
+	state.firstCurrency = state.secondCurrency;
+	state.secondCurrency = temp;
+	if (state.firstCurrency.value == "") {
+		state.secondCurrency.value = "";
+	}
 	return state;
 };
 

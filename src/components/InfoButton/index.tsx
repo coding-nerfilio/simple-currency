@@ -19,7 +19,9 @@ const InfoButton = () => {
 	const onClose = () => showModal(!modal);
 	return (
 		<>
-			<Button onClick={() => showModal(true)}>ⓘ</Button>
+			<Button onClick={() => showModal(true)} size="xs">
+				ⓘ
+			</Button>
 			<Modal isOpen={modal} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent>

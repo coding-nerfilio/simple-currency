@@ -6,6 +6,7 @@ import {
 	Select,
 	Text,
 	Flex,
+	InputLeftElement,
 } from "@chakra-ui/react";
 import Currencies, { Currency } from "../../types/currencies";
 import { CurrencyInput } from "../ExchangerInput/exchanger-input.types";
@@ -22,28 +23,33 @@ const InputField = ({
 	onChangeSelect: any;
 	placeholder: string;
 }) => (
-	<Flex flexDir="column" align="center">
-		<Flex>
-			<Text>{field.currencyType.name}</Text>
-		</Flex>
-		<Flex>
-			<CurrencyFlag currency={field.currencyType.symbol} size="md" />
-			{onChangeText !== undefined && (
+	<Flex flexDir="column" align="center" mb="10px" justify="center">
+		<Flex align="center" justify="center">
+			<InputGroup w="70%">
+				<InputLeftElement>
+					<CurrencyFlag currency={field.currencyType.symbol} size="md" />
+				</InputLeftElement>
 				<Input
 					placeholder={placeholder}
 					value={field.value}
 					onChange={(e) => {
-						onChangeText(e);
+						if (onChangeText !== undefined) {
+							onChangeText(e);
+						}
 					}}
 					isInvalid={field.error}
 					borderRadius="0"
 					borderRightWidth="0"
+					style={{
+						caretColor: onChangeText === undefined ? "transparent" : "black",
+					}}
 				/>
-			)}
+			</InputGroup>
 
 			<Select
 				borderRadius="0"
 				borderLeftWidth="0"
+				w="%30"
 				value={field.currencyType.symbol}
 				onChange={(e) => onChangeSelect(e)}
 			>
@@ -56,24 +62,3 @@ const InputField = ({
 );
 
 export default InputField;
-
-/*<InputGroup>
-		{onChangeText == undefined ? (
-			<Text>{textValue == "" ? placeholder : textValue}</Text>
-		) : (
-			<Input
-
-			/>
-		)}
-
-		<InputRightElement>
-			<Select>
-				
-			</Select>
-		</InputRightElement>
-		{errorTexts.map((text) => (
-			<div>{text}</div>
-		))}
-	</InputGroup>
-
-*/

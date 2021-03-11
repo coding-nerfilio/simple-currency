@@ -1,18 +1,23 @@
-import { Button, Flex, Heading } from "@chakra-ui/react";
-import * as React from "react";
+import { Flex } from "@chakra-ui/react";
 import ExchangerHistory from "../ExchangerHistory";
 import ExchangerInput from "../ExchangerInput";
-import InfoButton from "../InfoButton";
+import Header from "../Header";
 
 const Layout = () => (
-	<Flex flexDir="column" justify="center" align="center">
-		<Flex justify="center">
-			<Heading>Simple Currency</Heading>
-			<InfoButton />
+	<Flex flexDir="column" overflow="hidden" h="100vh">
+		<Header />
+		<Flex
+			mt="8vh"
+			overflowY="auto"
+			flexDir="column"
+			pt="1vh"
+			pl="1vw"
+			pr="1vw"
+			pb="2vh"
+		>
+			<ExchangerInput />
+			<ExchangerHistory />
 		</Flex>
-
-		<ExchangerInput />
-		<ExchangerHistory />
 	</Flex>
 );
 export default Layout;
