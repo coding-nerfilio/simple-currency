@@ -1,6 +1,7 @@
-import { Flex, Heading, Text } from "@chakra-ui/layout";
-import * as React from "react";
-import InfoButton from "../InfoButton";
+import { Flex, Text } from "@chakra-ui/layout";
+import lodeable from "@loadable/component";
+
+const InfoButton = lodeable(() => import("../InfoButton"));
 
 const Header = () => (
 	<Flex
@@ -22,9 +23,3 @@ const Header = () => (
 );
 
 export default Header;
-
-/*
-
-<InfoButton />
-
-*/

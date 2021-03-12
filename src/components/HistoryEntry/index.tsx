@@ -1,7 +1,9 @@
 import { Flex, Text } from "@chakra-ui/layout";
-import * as React from "react";
 import { historyEntry } from "../../types/history";
-import CurrencyFlag from "react-currency-flags";
+import lodeable from "@loadable/component";
+
+const CurrencyFlag = lodeable(() => import("react-currency-flags"));
+
 const HistoryEntry = ({ entry }: { entry: historyEntry }) => (
 	<Flex
 		mb="15px"

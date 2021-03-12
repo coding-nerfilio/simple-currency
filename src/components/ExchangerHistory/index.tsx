@@ -2,8 +2,10 @@ import { connect } from "react-redux";
 import actions from "../../redux/actions";
 import selectors from "../../redux/selectors";
 import { ReduxState } from "../../redux/types";
-import State from "./exchanger-history.state";
 import { IProps } from "./exchanger-history.types";
+import lodeable from "@loadable/component";
+
+const State = lodeable(() => import("./exchanger-history.state"));
 
 const ExchangerHistory = (props: IProps) => {
 	return (

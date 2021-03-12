@@ -1,8 +1,10 @@
 import { connect } from "react-redux";
 import actions from "../../redux/actions";
 import { historyEntry } from "../../types/history";
-import State from "./exchanger-input.state";
 import { IProps } from "./exchanger-input.types";
+import lodeable from "@loadable/component";
+
+const State = lodeable(() => import("./exchanger-input.state"));
 
 const ExchangerInput = (props: IProps) => (
 	<State handleUpdateHistory={props.handleUpdateHistory} />

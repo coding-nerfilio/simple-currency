@@ -1,7 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import ExchangerHistory from "../ExchangerHistory";
-import ExchangerInput from "../ExchangerInput";
 import Header from "../Header";
+import lodeable from "@loadable/component";
+
+const ExchangerInput = lodeable(() => import("../ExchangerInput"));
+const ExchangerHistory = lodeable(() => import("../ExchangerHistory"));
 
 const Layout = () => (
 	<Flex flexDir="column" overflow="hidden" h="100vh">

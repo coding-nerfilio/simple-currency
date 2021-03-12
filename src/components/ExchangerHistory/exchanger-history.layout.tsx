@@ -1,8 +1,8 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
-import React from "react";
-import CurrencyFlag from "react-currency-flags/dist/components";
+import { Flex } from "@chakra-ui/react";
 import { historyEntry } from "../../types/history";
-import HistoryEntry from "../HistoryEntry";
+import lodeable from "@loadable/component";
+
+const HistoryEntry = lodeable(() => import("../HistoryEntry"));
 
 const Layout = (props: {
 	historyList: historyEntry[];

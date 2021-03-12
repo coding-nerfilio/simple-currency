@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
 	InputGroup,
 	Select,
@@ -8,7 +7,9 @@ import {
 } from "@chakra-ui/react";
 import Currencies from "../../types/currencies";
 import { CurrencyInput } from "../ExchangerInput/exchanger-input.types";
-import CurrencyFlag from "react-currency-flags";
+import lodeable from "@loadable/component";
+
+const CurrencyFlag = lodeable(() => import("react-currency-flags"));
 
 const InputField = ({
 	field,

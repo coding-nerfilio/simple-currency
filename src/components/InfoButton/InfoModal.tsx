@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
 	Flex,
 	Link,
@@ -11,6 +10,7 @@ import {
 	ModalOverlay,
 	Text,
 } from "@chakra-ui/react";
+
 const InfoModal = ({
 	modal,
 	onClose,

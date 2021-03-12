@@ -1,8 +1,9 @@
-import React from "react";
 import { Flex, Button } from "@chakra-ui/react";
 import { Inputs, IState } from "./exchanger-input.types";
-import InputField from "../InputField";
 import { ChangeIcon } from "../Icon";
+import lodeable from "@loadable/component";
+
+const InputField = lodeable(() => import("../InputField"));
 
 const Layout = (props: {
 	state: IState;

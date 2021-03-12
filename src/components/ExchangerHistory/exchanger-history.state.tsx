@@ -1,4 +1,3 @@
-import React from "react";
 import storage from "../../storage";
 import Layout from "./exchanger-history.layout";
 import { IProps } from "./exchanger-history.types";

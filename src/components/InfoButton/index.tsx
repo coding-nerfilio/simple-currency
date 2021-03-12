@@ -1,6 +1,8 @@
 import { Button } from "@chakra-ui/react";
 import * as React from "react";
-import InfoModal from "./InfoModal";
+import lodeable from "@loadable/component";
+
+const InfoModal = lodeable(() => import("./InfoModal"));
 
 const InfoButton = () => {
 	const [modal, showModal] = React.useState(false);
