@@ -37,6 +37,7 @@ const Layout = (props: {
 					onClick={props.changeCurrency}
 					rounded="none"
 					mr="20px"
+					aria-label="Change currencies"
 				>
 					<ChangeIcon />
 				</Button>
@@ -44,6 +45,7 @@ const Layout = (props: {
 					size="sm"
 					rounded="none"
 					onClick={props.handleExchangeOperation}
+					aria-label="Convert"
 				>
 					CONVERT
 				</Button>

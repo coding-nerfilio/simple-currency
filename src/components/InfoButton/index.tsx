@@ -8,7 +8,11 @@ const InfoButton = () => {
 	const onClose = () => showModal(!modal);
 	return (
 		<>
-			<Button onClick={() => showModal(true)} size="xs">
+			<Button
+				onClick={() => showModal(true)}
+				size="xs"
+				aria-label="Information"
+			>
 				ⓘ
 			</Button>
 			<InfoModal modal={modal} onClose={onClose} />
