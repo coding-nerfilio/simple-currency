@@ -8,7 +8,7 @@ Visit it on [https://simple-currency-pwa.web.app/](https://simple-currency-pwa.w
 Wanted to have a small and handy PWA for fast and reliable currency conversions from any device, it also works as a brief
 showcase of some skills like API fetching, localStorage management, Redux and type safety.
 
-## How to play around
+## Playing around
 
 Just git clone, and install dependencies:
 
