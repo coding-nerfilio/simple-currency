@@ -31,21 +31,26 @@ const InfoButton = () => {
 						<Flex flexDir="column">
 							<Text>
 								A minimalist currency exchanger PWA powered by{" "}
-								<Link href="https://currencylayer.com/">currencylayer API</Link>
-								.
+								<Link
+									color="lightslategrey"
+									href="https://www.currencyconverterapi.com/"
+								>
+									CurrencyConverterApi.com
+								</Link>
 							</Text>
 							<Text>
 								You could find the source code on{" "}
-								<Link href="https://github.com/coding-nerfilio/simple-currency/">
+								<Link
+									color="lightslategrey"
+									href="https://github.com/coding-nerfilio/simple-currency/"
+								>
 									GitHub
 								</Link>
 							</Text>
 						</Flex>
 					</ModalBody>
-					<ModalFooter>
-						<Text textAlign="center">
-							Simple Currency Copyright (C) 2021 Francisco Risso
-						</Text>
+					<ModalFooter alignContent="center" justifyContent="center">
+						<Text>Simple Currency Copyright (C) 2021 Francisco Risso</Text>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>

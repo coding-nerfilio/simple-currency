@@ -16,6 +16,7 @@ export const handleInput = (type: Inputs, data: string, state: IState) => {
 			return state;
 		case Inputs.secondCurrency_type:
 			state.secondCurrency.currencyType = getKeyValue(Currencies, data);
+			state.secondCurrency.value = "";
 			return state;
 		case Inputs.secondCurrency_value:
 			state.secondCurrency.value = data;
@@ -87,9 +88,7 @@ export const handleExchangeOperation = async (
 		destination: {
 			currency: state.secondCurrency.currencyType.symbol,
 			value: (
-				(Number(state.firstCurrency.value) /
-					currencyRates.data["USD" + state.firstCurrency.currencyType.symbol]) *
-				currencyRates.data["USD" + state.secondCurrency.currencyType.symbol]
+				Number(state.firstCurrency.value) * Number(currencyRates.data)
 			).toFixed(3),
 		},
 	};
