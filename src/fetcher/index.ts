@@ -6,7 +6,7 @@ class Fetcher {
 	TIMEOUT: number;
 
 	constructor() {
-		this.API_KEY = process.env.REACT_APP_CURRENCYLAYER_API_KEY as string;
+		this.API_KEY = process.env.REACT_APP_CURRENCYCONVERTER_API_KEY as string;
 		this.API_URL = "https://free.currconv.com/api/v7/convert";
 		this.TIMEOUT = 5000;
 	}
@@ -24,7 +24,7 @@ class Fetcher {
 			"_" +
 			destinationCurrency.symbol +
 			"&compact=y";
-		console.log(this.API_KEY);
+
 		let result = await dispatchFetch(URL);
 		if (result.data != null) {
 			result.data =
