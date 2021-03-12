@@ -1,26 +1,5 @@
 import { Icon } from "@chakra-ui/react";
 
-const EqualIcon = () => (
-	<Icon width="16px" height="16px" viewBox="0 0 16 16" fill="none">
-		<rect
-			xmlns="http://www.w3.org/2000/svg"
-			x="2"
-			y="4"
-			width="12"
-			height="3"
-			fill="#C4C4C4"
-		/>
-		<rect
-			xmlns="http://www.w3.org/2000/svg"
-			x="2"
-			y="9"
-			width="12"
-			height="3"
-			fill="#C4C4C4"
-		/>
-	</Icon>
-);
-
 const ChangeIcon = () => (
 	<Icon width="16px" height="16px" viewBox="0 0 16 16" fill="none">
 		<rect x="2" y="1" width="2" height="5" fill="#000000" />
@@ -114,4 +93,4 @@ const ChangeIcon = () => (
 	</Icon>
 );
 
-export { EqualIcon, ChangeIcon };
+export { ChangeIcon };

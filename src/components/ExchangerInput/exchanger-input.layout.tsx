@@ -1,20 +1,8 @@
 import React from "react";
-import {
-	Flex,
-	Input,
-	Button,
-	InputGroup,
-	InputRightAddon,
-	Select,
-	InputRightElement,
-	Text,
-} from "@chakra-ui/react";
+import { Flex, Button } from "@chakra-ui/react";
 import { Inputs, IState } from "./exchanger-input.types";
-import Currencies from "../../types/currencies";
 import InputField from "../InputField";
-
-import MoneyTransfer from "../../assets/images/money-transfer.svg";
-import { ChangeIcon, EqualIcon } from "../Icon";
+import { ChangeIcon } from "../Icon";
 
 const Layout = (props: {
 	state: IState;

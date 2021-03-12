@@ -1,14 +1,12 @@
 import * as React from "react";
 import {
 	InputGroup,
-	Input,
-	InputRightElement,
 	Select,
-	Text,
+	Input,
 	Flex,
 	InputLeftElement,
 } from "@chakra-ui/react";
-import Currencies, { Currency } from "../../types/currencies";
+import Currencies from "../../types/currencies";
 import { CurrencyInput } from "../ExchangerInput/exchanger-input.types";
 import CurrencyFlag from "react-currency-flags";
 
