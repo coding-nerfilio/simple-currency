@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/layout";
 import { historyEntry } from "../../types/history";
 import lodeable from "@loadable/component";
 import MotionBox from "../MotionBox";
+import { animations, variants } from "./animations";
 
 const CurrencyFlag = lodeable(() => import("react-currency-flags"));
 
@@ -16,7 +17,11 @@ const HistoryEntry = ({ entry }: { entry: historyEntry }) => (
     pt="12px"
     pb="10px"
     border="#edbbf7 1px solid"
-    animate={{ scale: "1" }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    opacity={0}
+    variants={variants}
+    animate={animations.initial}
   >
     <Information currency={entry.source.currency} value={entry.source.value} />
     <Information

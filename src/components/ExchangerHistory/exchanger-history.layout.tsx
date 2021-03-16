@@ -10,15 +10,7 @@ const Layout = (props: {
 }) => (
   <Flex flexDir="column" align="center" mt="30px">
     {props.historyList.map((entry) => (
-      <HistoryEntry
-        entry={entry}
-        key={
-          Number(entry.destination.value) +
-          Number(entry.source.value) +
-          entry.destination.currency.length -
-          entry.source.currency.length
-        }
-      />
+      <HistoryEntry entry={entry} key={entry.timestamp} />
     ))}
   </Flex>
 );
