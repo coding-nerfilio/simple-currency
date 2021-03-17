@@ -65,7 +65,8 @@ export const handleExchangeOperation = async (
 ): Promise<string> => {
   let currencyRates = await fetcher.getExchangeRate(
     state.firstCurrency.currencyType,
-    state.secondCurrency.currencyType
+    state.secondCurrency.currencyType,
+    fetch
   );
 
   if (currencyRates.data == null) {

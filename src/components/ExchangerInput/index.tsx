@@ -7,10 +7,10 @@ import lodeable from "@loadable/component";
 const State = lodeable(() => import("./exchanger-input.state"));
 
 const ExchangerInput = (props: IProps) => (
-	<State handleUpdateHistory={props.handleUpdateHistory} />
+  <State handleUpdateHistory={props.handleUpdateHistory} />
 );
 
 export default connect(null, (dispatch) => ({
-	handleUpdateHistory: (historyList: historyEntry[]) =>
-		dispatch(actions.history.SET_HISTORY.constructor(historyList)),
+  handleUpdateHistory: (historyList: historyEntry[]) =>
+    dispatch(actions.history.SET_HISTORY.constructor(historyList)),
 }))(ExchangerInput);

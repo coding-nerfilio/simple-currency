@@ -4,10 +4,7 @@ import lodeable from "@loadable/component";
 
 const HistoryEntry = lodeable(() => import("../HistoryEntry"));
 
-const Layout = (props: {
-  historyList: historyEntry[];
-  handleDeleteHistory: () => void;
-}) => (
+const Layout = (props: { historyList: historyEntry[] }) => (
   <Flex flexDir="column" align="center" mt="30px">
     {props.historyList.map((entry) => (
       <HistoryEntry entry={entry} key={entry.timestamp} />

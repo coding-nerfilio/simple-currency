@@ -1,5 +1,3 @@
-import { Currency } from "./currencies";
-
 type historyEntryField = {
   currency: string;
   value: string;
