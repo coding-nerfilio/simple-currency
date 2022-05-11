@@ -32,9 +32,13 @@ public class CurrencyRate {
     }
 
     public boolean isValid () throws CurrencyRateInvalid {
-        Calendar deadline = Calendar.getInstance();
-        deadline.add(Calendar.HOUR_OF_DAY,1);
-        if(lastUpdate.before(deadline.getTime())) {
+        Calendar calendar = Calendar.getInstance();
+        Date now = calendar.getTime();
+        calendar.setTime(lastUpdate);
+        calendar.add(Calendar.HOUR_OF_DAY, 1);
+        Date deadline = calendar.getTime();
+
+        if(deadline.after(now)){
             return true;
         }else{
             throw new CurrencyRateInvalid();
@@ -42,10 +46,10 @@ public class CurrencyRate {
     }
 
     public double doExchange(CurrencyRateRequest request){
-        if(request.getBaseCurrency() == id.getBaseCurrency()){
-            return request.getBaseValue() * baseToDestinationRate;
+        if(request.getBaseCurrency().equals(id.getBaseCurrency())){
+            return request.getBaseValue() / baseToDestinationRate;
         }else{
-            return request.getBaseValue() * destinationToBaseRate;
+            return request.getBaseValue() / destinationToBaseRate;
         }
     }
 }
