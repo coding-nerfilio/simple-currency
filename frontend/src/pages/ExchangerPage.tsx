@@ -1,5 +1,7 @@
+import { Container } from "@chakra-ui/react";
+
 const ExchangerPage = () => {
-	return <>e</>;
+	return <Container></Container>;
 };
 
 export default ExchangerPage;
