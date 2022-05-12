@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
@@ -41,7 +42,7 @@ public class CurrencyRateController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<CurrencyRateResponse> doExchange(CurrencyRateRequest request){
+    public ResponseEntity<CurrencyRateResponse> doExchange(@RequestBody CurrencyRateRequest request){
         Optional<CurrencyRate> currencyRate;
         try {
             //Check if exchange information exists on system (both ways) or needs to be fetched
