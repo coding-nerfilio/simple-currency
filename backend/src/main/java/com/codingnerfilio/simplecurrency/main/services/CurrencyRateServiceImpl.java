@@ -2,6 +2,8 @@ package com.codingnerfilio.simplecurrency.main.services;
 
 import com.codingnerfilio.simplecurrency.main.entities.CurrencyRate;
 import com.codingnerfilio.simplecurrency.main.entities.RateId;
+import com.codingnerfilio.simplecurrency.main.exceptions.CurrencyRateInvalid;
+import com.codingnerfilio.simplecurrency.main.exceptions.CurrencyRateNotFound;
 import com.codingnerfilio.simplecurrency.main.repositories.CurrencyRateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +21,12 @@ public class CurrencyRateServiceImpl implements  CurrencyRateService{
     }
 
     @Override
-    public Optional<CurrencyRate> findById(RateId id) {
-        return repository.findById(id);
+    public CurrencyRate findById(RateId id) throws CurrencyRateNotFound, CurrencyRateInvalid {
+        Optional<CurrencyRate> data = repository.findById(id)
+                .or(()->repository.findById(id.reverse()));
+        if(data.isEmpty()) {throw new CurrencyRateNotFound();}
+        data.get().isValid();
+        return data.get();
     }
 
     @Override

@@ -23,8 +23,15 @@ public class RateId implements Serializable {
         this.destinationCurrency = destinationCurrency;
     }
 
-    public RateId(CurrencyRateRequest request, Boolean reverse){
-        this.baseCurrency = !reverse ? request.getBaseCurrency() : request.getDestinationCurrency();
-        this.destinationCurrency =  !reverse ? request.getDestinationCurrency() : request.getBaseCurrency();
+    public RateId(CurrencyRateRequest request){
+        this.baseCurrency = request.getBaseCurrency();
+        this.destinationCurrency =  request.getDestinationCurrency();
+    }
+
+    public RateId reverse(){
+        String temp = this.baseCurrency;
+        this.baseCurrency = this.destinationCurrency;
+        this.destinationCurrency = temp;
+        return this;
     }
 }
